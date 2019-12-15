@@ -1,38 +1,40 @@
 
-// stdafx.h : ±ê×¼ÏµÍ³°üº¬ÎÄ¼þµÄ°üº¬ÎÄ¼þ£¬
-// »òÊÇ¾­³£Ê¹ÓÃµ«²»³£¸ü¸ÄµÄ
-// ÌØ¶¨ÓÚÏîÄ¿µÄ°üº¬ÎÄ¼þ
+// stdafx.h : ï¿½ï¿½×¼ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä°ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½
+// ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ä°ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 
 #pragma once
 
 #ifndef VC_EXTRALEAN
-#define VC_EXTRALEAN            // ´Ó Windows Í·ÖÐÅÅ³ý¼«ÉÙÊ¹ÓÃµÄ×ÊÁÏ
+#define VC_EXTRALEAN            // ï¿½ï¿½ Windows Í·ï¿½ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 #endif
 
 #include "targetver.h"
 
-#define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // Ä³Ð© CString ¹¹Ôìº¯Êý½«ÊÇÏÔÊ½µÄ
+#define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // Ä³Ð© CString ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½
 
-// ¹Ø±Õ MFC ¶ÔÄ³Ð©³£¼ûµ«¾­³£¿É·ÅÐÄºöÂÔµÄ¾¯¸æÏûÏ¢µÄÒþ²Ø
+// ï¿½Ø±ï¿½ MFC ï¿½ï¿½Ä³Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É·ï¿½ï¿½Äºï¿½ï¿½ÔµÄ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define _AFX_ALL_WARNINGS
 
-#include <afxwin.h>         // MFC ºËÐÄ×é¼þºÍ±ê×¼×é¼þ
-#include <afxext.h>         // MFC À©Õ¹
+#include <afxwin.h>         // MFC ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½×¼ï¿½ï¿½ï¿½
+#include <afxext.h>         // MFC ï¿½ï¿½Õ¹
 
 
-#include <afxdisp.h>        // MFC ×Ô¶¯»¯Àà
+#include <afxdisp.h>        // MFC ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 
 #ifndef _AFX_NO_OLE_SUPPORT
-#include <afxdtctl.h>           // MFC ¶Ô Internet Explorer 4 ¹«¹²¿Ø¼þµÄÖ§³Ö
+#include <afxdtctl.h>           // MFC ï¿½ï¿½ Internet Explorer 4 ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½Ö§ï¿½ï¿½
 #endif
 #ifndef _AFX_NO_AFXCMN_SUPPORT
-#include <afxcmn.h>             // MFC ¶Ô Windows ¹«¹²¿Ø¼þµÄÖ§³Ö
+#include <afxcmn.h>             // MFC ï¿½ï¿½ Windows ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½Ö§ï¿½ï¿½
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
-#include <afxcontrolbars.h>     // ¹¦ÄÜÇøºÍ¿Ø¼þÌõµÄ MFC Ö§³Ö
+#include <afxcontrolbars.h>     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¿Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ MFC Ö§ï¿½ï¿½
 #include "ShowWindow.h"
+#include "login_common.h"
+//#include "sqlite3.h"
 #include "sqlite3.h"
 #include "sqlTool.h"
 #include <string>

@@ -49,6 +49,10 @@ END_MESSAGE_MAP()
 
 CcBigHomeworkDlg::CcBigHomeworkDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CcBigHomeworkDlg::IDD, pParent)
+	, m_username(_T(""))
+	, m_password(_T(""))
+	, user(0)
+	, admin(0)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -56,6 +60,8 @@ CcBigHomeworkDlg::CcBigHomeworkDlg(CWnd* pParent /*=NULL*/)
 void CcBigHomeworkDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, m_username);
+	DDX_Text(pDX, IDC_EDIT2, m_password);
 }
 
 BEGIN_MESSAGE_MAP(CcBigHomeworkDlg, CDialogEx)
@@ -63,6 +69,8 @@ BEGIN_MESSAGE_MAP(CcBigHomeworkDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CcBigHomeworkDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_RADIO1, &CcBigHomeworkDlg::OnBnClickedRadio1)
+	ON_BN_CLICKED(IDC_RADIO2, &CcBigHomeworkDlg::OnBnClickedRadio2)
 END_MESSAGE_MAP()
 
 
@@ -156,8 +164,32 @@ HCURSOR CcBigHomeworkDlg::OnQueryDragIcon()
 void CcBigHomeworkDlg::OnBnClickedButton1()
 {
 	// TODO:  在此添加控件通知处理程序代码
-	CShowWindow  *dlg = new CShowWindow;
+	UpdateData(TRUE);
+	//检查用户名密码是否正确
+	BOOL is_true = check(m_username, m_password, user);
+	if (is_true)
+	{
+		CShowWindow  *dlg = new CShowWindow;
+		dlg->Create(IDD_MAINWINDOW_DIALOG);
+		dlg->ShowWindow(SW_SHOW);
+	}
+	else
+	{
+		MessageBox(L"用户名或者密码错误");
+	}
+	
+}
 
-	dlg->Create(IDD_MAINWINDOW_DIALOG);
-	dlg->ShowWindow(SW_SHOW);
+
+void CcBigHomeworkDlg::OnBnClickedRadio1()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	user = 1;
+}
+
+
+void CcBigHomeworkDlg::OnBnClickedRadio2()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	user = 0;
 }

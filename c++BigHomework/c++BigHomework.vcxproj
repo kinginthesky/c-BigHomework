@@ -58,6 +58,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>sqlite3.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -104,9 +106,12 @@
     <ClInclude Include="Add.h" />
     <ClInclude Include="c++BigHomework.h" />
     <ClInclude Include="c++BigHomeworkDlg.h" />
+    <ClInclude Include="login_common.h" />
     <ClInclude Include="Modify.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ShowWindow.h" />
+    <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="sqlTool.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -114,8 +119,10 @@
     <ClCompile Include="Add.cpp" />
     <ClCompile Include="c++BigHomework.cpp" />
     <ClCompile Include="c++BigHomeworkDlg.cpp" />
+    <ClCompile Include="login_common.cpp" />
     <ClCompile Include="Modify.cpp" />
     <ClCompile Include="ShowWindow.cpp" />
+    <ClCompile Include="sqlTool.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
